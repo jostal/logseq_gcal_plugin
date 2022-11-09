@@ -1,0 +1,12 @@
+{
+  "client_id":"942360448577-oc7ne5kcik4s29hvvnsh9o97evgbgsed.apps.googleusercontent.com",
+  "api_key": "AIzaSyDxLWTOToEo8Jwganq9nN-R0d64OhMIPDg",
+  "project_id":"logseq-gcal",
+  "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+  "token_uri":"https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+  "client_secret":"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",
+  "javascript_origins":["http://localhost:3000","http://localhost"],
+  "scope": "https://www.googleapis.com/auth/calendar",
+  "discovery_docs": ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
+}

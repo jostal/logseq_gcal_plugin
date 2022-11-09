@@ -1,9 +1,9 @@
 {
-  "name": "logseq-plugin-react-boilerplate",
+  "name": "logseq-gcal",
   "version": "1.0.0",
   "main": "dist/index.html",
   "logseq": {
-    "id": "logseq-plugin-react-boilerplate",
+    "id": "logseq-gcal",
     "icon": "logo.png"
   },
   "scripts": {
@@ -12,10 +12,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "2.1.0",
     "@logseq/libs": "^0.0.1-alpha.34",
+    "@react-oauth/google": "^0.4.0",
     "antd": "^4.18.9",
+    "gapi-script": "^1.2.0",
+    "googleapis": "105",
+    "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-gapi": "^1.0.2",
+    "react-google-calendar-api": "^2.1.0",
+    "react-google-login": "^5.2.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",

@@ -1,15 +1,29 @@
 import './App.css'
+import Calendar from "./components/calendar/Calendar";
+import {GoogleOAuthProvider} from "@react-oauth/google";
+import { UserContext } from "./store/User";
+import data from '../api_config.json'
+import {useContext} from "react";
+import GoogleSignIn from "./components/signIn/GoogleSignIn";
 
 const App: React.FC<{ env: string }> = ({ env }) => {
-  return (
-    <div className="w-screen h-screen flex items-center justify-center text-white">
-      <div className="w-screen h-screen fixed top-0 left-0" onClick={() => logseq.hideMainUI()}></div>
-      <div className="w-5/6 h-5/6 z-0 bg-gradient-to-tr from-yellow-400 via-red-500 to-pink-500 flex flex-col items-center justify-center">
-        <h1 className="font-bold text-4xl">Logseq-plugin-react-boilerplate</h1>
-        <h2 className="text-2xl mt-6">Current Env: {env}</h2>
-      </div>
-    </div>
-  )
+    const [user] = useContext(UserContext)
+
+    return (
+        <div className="w-screen h-screen flex items-center justify-center text-white">
+            <GoogleOAuthProvider clientId={data.client_id}>
+                <div className="calendar-popup">
+                    {// @ts-ignore
+                        !user.signedIn ? (
+                        <GoogleSignIn />
+                    ) : (
+                        <Calendar />
+                    )}
+                </div>
+            </GoogleOAuthProvider>
+          <button onClick={() => logseq.hideMainUI()}></button>
+        </div>
+   )
 }
 
 export default App
